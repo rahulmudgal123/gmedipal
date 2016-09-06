@@ -1,0 +1,69 @@
+.dash-widget-item { 
+    min-height: 180px !important; 
+}
+.bgm-white{
+background: #fff;
+}
+.bgm-white a{
+ color: #6D717A !important;
+}
+.create-event-btn-a{
+color: #fff !important;
+}
+.create-event-btn{
+ margin-top: -5px;
+}
+.bgm-lightgray{
+background: #ededed;
+}
+.action-btn{
+ margin-top: 10px;
+}
+.ticketbox{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    vertical-align: middle;
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px #dedede solid;
+    background: #fff;
+    color: #666;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+.ticket-settings{
+padding: 10px;
+display: none;
+}
+.textarea-offline-payments {
+    width: 550px;
+    height: 150px;
+}
+
+div#information-to-collect div.info-header > p {
+    display: inline;
+    float: right;
+    margin-right: 50px;
+}
+
+div#information-to-collect > div {
+    width: 100%;
+}
+
+div#information-to-collect div.info-label {
+    display: inline;
+}
+
+div#information-to-collect div.info-include, div.info-require {
+    display: inline;
+    float: right;
+    margin-right: 50px;
+}
+
+div#information-to-collect div.info-require {
+    margin-right: 55px;
+}
