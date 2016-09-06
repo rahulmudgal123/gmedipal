@@ -136,5 +136,58 @@ class Doctor extends CI_Controller {
         $this->session->sess_destroy();
         redirect('home', 'refresh');
     }
+    
+    public function editProfile() {
+        try {
 
-}
+            $data = new stdClass();
+            $doctor_id = $this->session->userdata('doctor_id');
+            $data->doctor_details = $this->doctor_model->doctor_data($doctor_id);
+            
+            $this->session->set_flashdata('login_failed', 'Email address or Password wrong.');
+            $this->load->view('template/head.inc.php');
+            $this->load->view('template/header.php');
+            $this->load->view('doctor/editprofile.php',$data);
+            $this->load->view('template/footer.inc.php');
+            $this->load->view('template/js.php');
+            
+        } catch (Exception $ex) {
+            var_dump($ex->getMessage());
+        }
+        
+        }
+        
+        public function update_doctor(){
+        try {   
+                //echo "hello";
+                
+                //$data->time =  now();
+                $data = new stdClass();
+                //$this->load->model('Users_model');
+                               
+                $data->firstname = $this->input->post('fname');
+                $data->lastname = $this->input->post('lname');
+                $data->gmc_no = $this->input->post('Gmcno');
+                $data->trust_hospital = $this->input->post('Trust_hospital');
+                $data->email = $this->input->post('email_address');
+                $data->mobile_no = $this->input->post('mobile_no');
+                
+                $data->doctor_id = $this->session->userdata('doctor_id');
+                $data->edit = $this->doctor_model->doctor_update($data);
+                $this->session->set_flashdata('feedback', 'Doctor edit succesfully');
+                $this->load->view('template/head.inc.php');
+                $this->load->view('template/header.php');
+                $this->load->view('doctor/editprofile.php',$data);
+                $this->load->view('template/footer.inc.php');
+                $this->load->view('template/js.php');
+                
+        } catch (Exception $ex) {
+            var_dump($ex->getMessage());
+        }
+    }
+        
+        //$this->session->sess_destroy();
+        //redirect('home', 'refresh');
+    }
+
+

@@ -10,11 +10,11 @@
                             <form role="form" method="post" action="<?php echo site_url('doctor');?>"> 
                                 <div class="form-group fg-line">
                                     <h4>GMC Number</h4>
-                                    <input type="number" name="GMC_Number" class="input-lg form-control fg-input" id="exampleInputEmail1" placeholder="GMC Number" required="">
+                                    <input type="number" name="GMC_Number" class="input-lg form-control fg-input" id="exampleInputEmail1" placeholder="GMC Number" required="required">
                                 </div>
                                 <div class="form-group fg-line">
                                     <h4>Password</h4>
-                                    <input type="password" name="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password" required="">
+                                    <input type="password" name="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password" required="required">
                                 </div> 
 
                                 <div class="form-group fg-line">

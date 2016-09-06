@@ -69,7 +69,7 @@
                                         <input type="checkbox" name="terms"  required/>
                                         <i class="input-helper"></i>
                                         Agree to the <a href="">Terms and conditions</a>
-                                        <br/><br/> Already registered <a href="doctorlogin.php">Login here</a> 
+                                        <br/><br/> Already registered <a href="<?php echo site_url('doctor');?>">Login here</a> 
                                     </label>
                                 </div>
 
